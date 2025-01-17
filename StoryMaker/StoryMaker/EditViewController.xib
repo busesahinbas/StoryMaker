@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21701"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController" customModule="StoryMaker" customModuleProvider="target">
+            <connections>
+                <outlet property="checkButton" destination="checkButtonId" id="checkButtonOutlet"/>
+                <outlet property="filterCollectionView" destination="filterCollectionViewId" id="filterCollectionViewOutlet"/>
+                <outlet property="imageView" destination="imageViewId" id="imageViewOutlet"/>
+                <outlet property="sliderStack" destination="sliderStackId" id="sliderStackOutlet"/>
+                <outlet property="toolbarStack" destination="toolbarStackId" id="toolbarStackOutlet"/>
+                <outlet property="view" destination="mainView" id="mainViewId"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="mainView">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imageViewId">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                </imageView>
+                
+                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="toolbarStackId">
+                    <rect key="frame" x="0.0" y="758" width="393" height="60"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="toolbarHeight"/>
+                    </constraints>
+                </stackView>
+                
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="filterCollectionViewId">
+                    <rect key="frame" x="0.0" y="658" width="393" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="collectionViewHeight"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="flowLayout">
+                        <size key="itemSize" width="80" height="80"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sliderStackId">
+                    <rect key="frame" x="16" y="558" width="361" height="100"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="100" id="sliderStackHeight"/>
+                    </constraints>
+                </stackView>
+                
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="checkButtonId">
+                    <rect key="frame" x="333" y="59" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="checkButtonWidth"/>
+                        <constraint firstAttribute="height" constant="44" id="checkButtonHeight"/>
+                    </constraints>
+                    <color key="tintColor" systemColor="systemBlueColor"/>
+                    <state key="normal" image="checkmark.circle.fill" catalog="system"/>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="safeArea"/>
+            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="imageViewId" firstAttribute="top" secondItem="mainView" secondAttribute="top" id="imageTop"/>
+                <constraint firstItem="imageViewId" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="imageLeading"/>
+                <constraint firstAttribute="trailing" secondItem="imageViewId" secondAttribute="trailing" id="imageTrailing"/>
+                <constraint firstAttribute="bottom" secondItem="imageViewId" secondAttribute="bottom" id="imageBottom"/>
+                
+                <constraint firstItem="toolbarStackId" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="toolbarLeading"/>
+                <constraint firstAttribute="trailing" secondItem="toolbarStackId" secondAttribute="trailing" id="toolbarTrailing"/>
+                <constraint firstItem="safeArea" firstAttribute="bottom" secondItem="toolbarStackId" secondAttribute="bottom" id="toolbarBottom"/>
+                
+                <constraint firstItem="filterCollectionViewId" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="filterLeading"/>
+                <constraint firstAttribute="trailing" secondItem="filterCollectionViewId" secondAttribute="trailing" id="filterTrailing"/>
+                <constraint firstItem="toolbarStackId" firstAttribute="top" secondItem="filterCollectionViewId" secondAttribute="bottom" id="filterBottom"/>
+                
+                <constraint firstItem="sliderStackId" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="16" id="sliderLeading"/>
+                <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="sliderStackId" secondAttribute="trailing" constant="16" id="sliderTrailing"/>
+                <constraint firstItem="filterCollectionViewId" firstAttribute="top" secondItem="sliderStackId" secondAttribute="bottom" id="sliderBottom"/>
+                
+                <constraint firstItem="checkButtonId" firstAttribute="top" secondItem="safeArea" secondAttribute="top" constant="12" id="checkTop"/>
+                <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="checkButtonId" secondAttribute="trailing" constant="16" id="checkTrailing"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
