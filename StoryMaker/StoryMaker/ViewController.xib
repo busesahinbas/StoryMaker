@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="StoryMaker" customModuleProvider="target">
+            <connections>
+                <outlet property="selectImageButton" destination="hgf-Uh-5dP" id="XYZ-12-abc"/>
+                <outlet property="view" destination="iN0-l3-epB" id="FSd-45-def"/>
+                <outlet property="welcomeLabel" destination="k2Y-Ab-9pL" id="GHI-78-xyz"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="StoryMaker'a Hoşgeldiniz" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k2Y-Ab-9pL">
+                    <rect key="frame" x="20" y="376.66666666666669" width="353" height="28.666666666666686"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hgf-Uh-5dP">
+                    <rect key="frame" x="96.666666666666686" y="425.33333333333331" width="200" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="200" id="7Yx-gh-abc"/>
+                        <constraint firstAttribute="height" constant="50" id="Pqr-St-xyz"/>
+                    </constraints>
+                    <state key="normal" title="Fotoğraf Seç"/>
+                    <connections>
+                        <action selector="selectImageTapped:" destination="-1" eventType="touchUpInside" id="Uvw-89-def"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="hgf-Uh-5dP" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="012-Gh-ijk"/>
+                <constraint firstItem="k2Y-Ab-9pL" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" constant="-35" id="123-Ab-xyz"/>
+                <constraint firstItem="hgf-Uh-5dP" firstAttribute="top" secondItem="k2Y-Ab-9pL" secondAttribute="bottom" constant="20" id="345-Ij-lmn"/>
+                <constraint firstItem="k2Y-Ab-9pL" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="456-Cd-abc"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="k2Y-Ab-9pL" secondAttribute="trailing" constant="20" id="789-Ef-def"/>
+            </constraints>
+            <point key="canvasLocation" x="140" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
