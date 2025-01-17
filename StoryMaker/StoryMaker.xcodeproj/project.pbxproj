@@ -61,8 +61,6 @@
 		};
 		4DEF11322D3AAEDE0098FA68 /* StoryMakerTests */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-			);
 			path = StoryMakerTests;
 			sourceTree = "<group>";
 		};
@@ -209,6 +207,7 @@
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1600;
 				LastUpgradeCheck = 1600;
+				ORGANIZATIONNAME = "Buse Şahinbaş";
 				TargetAttributes = {
 					4DEF11152D3AAEDD0098FA68 = {
 						CreatedOnToolsVersion = 16.0;
