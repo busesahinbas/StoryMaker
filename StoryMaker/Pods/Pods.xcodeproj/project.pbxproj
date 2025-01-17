@@ -1,0 +1,601 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0A54F227BDCED4FF40E66B25B0DDFAA2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+		38292612991C513D727F5ACCA40D2A5E /* Pods-StoryMakerTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BC835A31199156AA099E8E4EF509422D /* Pods-StoryMakerTests-dummy.m */; };
+		840AF45C9F3D2F66C5C3C1A6AAE43988 /* Pods-StoryMaker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1E5142F45D61759B76F396FFC869D60D /* Pods-StoryMaker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		9BEA6A2ABC0EE8EDA281E3B10F7C1445 /* Pods-StoryMaker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E711DB8F4F919BD156312B6150C53B1 /* Pods-StoryMaker-dummy.m */; };
+		C1F3D2D14F8E854C07F5E63947ED6598 /* Pods-StoryMakerTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB9C26742D29B92217BA72035737B4FC /* Pods-StoryMakerTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E8DE5B8CBFDA1895A8FFA013A658B94A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		436D2CB8836D94948FF8BA4281438B75 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E76E1D7DF1FF7378424055BE7DCBA843;
+			remoteInfo = "Pods-StoryMaker";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		142C86516DD4A52D79F9D825D5D4D891 /* Pods-StoryMaker-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoryMaker-acknowledgements.plist"; sourceTree = "<group>"; };
+		1E5142F45D61759B76F396FFC869D60D /* Pods-StoryMaker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StoryMaker-umbrella.h"; sourceTree = "<group>"; };
+		2558136A457D6956ABA03B3DB8325307 /* Pods-StoryMaker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StoryMaker.modulemap"; sourceTree = "<group>"; };
+		384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F05AB9C14B6582BA1B6F480FCCB55DF /* Pods-StoryMakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoryMakerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		4A086E55202A61D3B5BE948373B99E87 /* Pods-StoryMakerTests */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-StoryMakerTests"; path = Pods_StoryMakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E6EA38BCAD12DB74FB9233C75FDED5E /* Pods-StoryMaker-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoryMaker-Info.plist"; sourceTree = "<group>"; };
+		5116BD511A8DF5914E6D8835EE195A7A /* Pods-StoryMakerTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoryMakerTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		5E711DB8F4F919BD156312B6150C53B1 /* Pods-StoryMaker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StoryMaker-dummy.m"; sourceTree = "<group>"; };
+		6B2DB8B19A00939C368245F50B228935 /* Pods-StoryMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoryMaker.debug.xcconfig"; sourceTree = "<group>"; };
+		75A5E8D43C60B278AE1E2B6FA62D8EE5 /* Pods-StoryMakerTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StoryMakerTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7974C40EEAF67B316C94C3991D0F10A8 /* Pods-StoryMaker-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-StoryMaker-acknowledgements.markdown"; sourceTree = "<group>"; };
+		7DC42224F3F4D76C0F608EC79C810134 /* Pods-StoryMaker */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-StoryMaker"; path = Pods_StoryMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		AA8271790703623968FF3AE246B9A681 /* Pods-StoryMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoryMakerTests.release.xcconfig"; sourceTree = "<group>"; };
+		B1A4343ECA7D12048D151E6FF8D5D4A0 /* Pods-StoryMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-StoryMaker.release.xcconfig"; sourceTree = "<group>"; };
+		BC835A31199156AA099E8E4EF509422D /* Pods-StoryMakerTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-StoryMakerTests-dummy.m"; sourceTree = "<group>"; };
+		DB9C26742D29B92217BA72035737B4FC /* Pods-StoryMakerTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-StoryMakerTests-umbrella.h"; sourceTree = "<group>"; };
+		E0A4E847EA446668B6E675D2CE03D0F4 /* Pods-StoryMakerTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-StoryMakerTests.modulemap"; sourceTree = "<group>"; };
+		F109DF528C43E03DF5F5CE80CBECF4DC /* Pods-StoryMakerTests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-StoryMakerTests-Info.plist"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3C19CED92D009A86D3CD2B33AF4FACA2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E8DE5B8CBFDA1895A8FFA013A658B94A /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		451707F44D46B806DD6403414157DEA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0A54F227BDCED4FF40E66B25B0DDFAA2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		621DF9767A9ECD3FFCE87A59DEBD8D72 /* Pods-StoryMaker */ = {
+			isa = PBXGroup;
+			children = (
+				2558136A457D6956ABA03B3DB8325307 /* Pods-StoryMaker.modulemap */,
+				7974C40EEAF67B316C94C3991D0F10A8 /* Pods-StoryMaker-acknowledgements.markdown */,
+				142C86516DD4A52D79F9D825D5D4D891 /* Pods-StoryMaker-acknowledgements.plist */,
+				5E711DB8F4F919BD156312B6150C53B1 /* Pods-StoryMaker-dummy.m */,
+				4E6EA38BCAD12DB74FB9233C75FDED5E /* Pods-StoryMaker-Info.plist */,
+				1E5142F45D61759B76F396FFC869D60D /* Pods-StoryMaker-umbrella.h */,
+				6B2DB8B19A00939C368245F50B228935 /* Pods-StoryMaker.debug.xcconfig */,
+				B1A4343ECA7D12048D151E6FF8D5D4A0 /* Pods-StoryMaker.release.xcconfig */,
+			);
+			name = "Pods-StoryMaker";
+			path = "Target Support Files/Pods-StoryMaker";
+			sourceTree = "<group>";
+		};
+		94F2E90F887EA9D3703889B65E1B39DD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7DC42224F3F4D76C0F608EC79C810134 /* Pods-StoryMaker */,
+				4A086E55202A61D3B5BE948373B99E87 /* Pods-StoryMakerTests */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AEB7F180CE6AF5815ED9BCAA4F7ADE30 /* Pods-StoryMakerTests */ = {
+			isa = PBXGroup;
+			children = (
+				E0A4E847EA446668B6E675D2CE03D0F4 /* Pods-StoryMakerTests.modulemap */,
+				75A5E8D43C60B278AE1E2B6FA62D8EE5 /* Pods-StoryMakerTests-acknowledgements.markdown */,
+				5116BD511A8DF5914E6D8835EE195A7A /* Pods-StoryMakerTests-acknowledgements.plist */,
+				BC835A31199156AA099E8E4EF509422D /* Pods-StoryMakerTests-dummy.m */,
+				F109DF528C43E03DF5F5CE80CBECF4DC /* Pods-StoryMakerTests-Info.plist */,
+				DB9C26742D29B92217BA72035737B4FC /* Pods-StoryMakerTests-umbrella.h */,
+				3F05AB9C14B6582BA1B6F480FCCB55DF /* Pods-StoryMakerTests.debug.xcconfig */,
+				AA8271790703623968FF3AE246B9A681 /* Pods-StoryMakerTests.release.xcconfig */,
+			);
+			name = "Pods-StoryMakerTests";
+			path = "Target Support Files/Pods-StoryMakerTests";
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
+				94F2E90F887EA9D3703889B65E1B39DD /* Products */,
+				F43F59D1EE41E03456C2C94475DC203C /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4801F62A6B08CD9B5410329F1A18FDE /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E4801F62A6B08CD9B5410329F1A18FDE /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				384DDA2CB25005BD6479B5987C619DD4 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		F43F59D1EE41E03456C2C94475DC203C /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				621DF9767A9ECD3FFCE87A59DEBD8D72 /* Pods-StoryMaker */,
+				AEB7F180CE6AF5815ED9BCAA4F7ADE30 /* Pods-StoryMakerTests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2A1D92638D9D05DC65787EDF723B8962 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C1F3D2D14F8E854C07F5E63947ED6598 /* Pods-StoryMakerTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E2604246E31F5122DD918EFBB4C2E267 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				840AF45C9F3D2F66C5C3C1A6AAE43988 /* Pods-StoryMaker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0BD16C972FE2AEF86E0E77413A3A5BEE /* Pods-StoryMakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5DAE21EADFFE9803EB30B1884E7A6CEF /* Build configuration list for PBXNativeTarget "Pods-StoryMakerTests" */;
+			buildPhases = (
+				2A1D92638D9D05DC65787EDF723B8962 /* Headers */,
+				D88F8FD3F8D79D4070CB46C253190F50 /* Sources */,
+				451707F44D46B806DD6403414157DEA3 /* Frameworks */,
+				754FD13DCF477CB65BFF72B6DE1F4C28 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				617A9EA56A8956692B23A06496AD06F9 /* PBXTargetDependency */,
+			);
+			name = "Pods-StoryMakerTests";
+			productName = Pods_StoryMakerTests;
+			productReference = 4A086E55202A61D3B5BE948373B99E87 /* Pods-StoryMakerTests */;
+			productType = "com.apple.product-type.framework";
+		};
+		E76E1D7DF1FF7378424055BE7DCBA843 /* Pods-StoryMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 315A0FECD350080127CF87BA3421F3B7 /* Build configuration list for PBXNativeTarget "Pods-StoryMaker" */;
+			buildPhases = (
+				E2604246E31F5122DD918EFBB4C2E267 /* Headers */,
+				2C8843591EBD12128E313A00F0548960 /* Sources */,
+				3C19CED92D009A86D3CD2B33AF4FACA2 /* Frameworks */,
+				9F430AC15B31F48BCC8E31398F930AFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-StoryMaker";
+			productName = Pods_StoryMaker;
+			productReference = 7DC42224F3F4D76C0F608EC79C810134 /* Pods-StoryMaker */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 16.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			minimizedProjectReferenceProxies = 0;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 94F2E90F887EA9D3703889B65E1B39DD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E76E1D7DF1FF7378424055BE7DCBA843 /* Pods-StoryMaker */,
+				0BD16C972FE2AEF86E0E77413A3A5BEE /* Pods-StoryMakerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		754FD13DCF477CB65BFF72B6DE1F4C28 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		9F430AC15B31F48BCC8E31398F930AFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2C8843591EBD12128E313A00F0548960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9BEA6A2ABC0EE8EDA281E3B10F7C1445 /* Pods-StoryMaker-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D88F8FD3F8D79D4070CB46C253190F50 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				38292612991C513D727F5ACCA40D2A5E /* Pods-StoryMakerTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		617A9EA56A8956692B23A06496AD06F9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "Pods-StoryMaker";
+			target = E76E1D7DF1FF7378424055BE7DCBA843 /* Pods-StoryMaker */;
+			targetProxy = 436D2CB8836D94948FF8BA4281438B75 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0BB8E7DBF9BB07797FDF2D3C929CB2DE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F05AB9C14B6582BA1B6F480FCCB55DF /* Pods-StoryMakerTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-StoryMakerTests/Pods-StoryMakerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StoryMakerTests/Pods-StoryMakerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		B30A9E08013763EA79826F23FDC2A9FD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6B2DB8B19A00939C368245F50B228935 /* Pods-StoryMaker.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-StoryMaker/Pods-StoryMaker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StoryMaker/Pods-StoryMaker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D11C5A349CAAA7536E1BB3980D179488 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = AA8271790703623968FF3AE246B9A681 /* Pods-StoryMakerTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-StoryMakerTests/Pods-StoryMakerTests-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StoryMakerTests/Pods-StoryMakerTests.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F52AD73E50A4238A35F117C163F3C4D3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B1A4343ECA7D12048D151E6FF8D5D4A0 /* Pods-StoryMaker.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_MODULE_VERIFIER = NO;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
+				INFOPLIST_FILE = "Target Support Files/Pods-StoryMaker/Pods-StoryMaker-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-StoryMaker/Pods-StoryMaker.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		315A0FECD350080127CF87BA3421F3B7 /* Build configuration list for PBXNativeTarget "Pods-StoryMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B30A9E08013763EA79826F23FDC2A9FD /* Debug */,
+				F52AD73E50A4238A35F117C163F3C4D3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DAE21EADFFE9803EB30B1884E7A6CEF /* Build configuration list for PBXNativeTarget "Pods-StoryMakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0BB8E7DBF9BB07797FDF2D3C929CB2DE /* Debug */,
+				D11C5A349CAAA7536E1BB3980D179488 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}

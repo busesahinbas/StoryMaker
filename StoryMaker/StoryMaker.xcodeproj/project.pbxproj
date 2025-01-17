@@ -1,0 +1,649 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5BD6883D0F6EB3EA86CA9FDC /* Pods_StoryMaker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6F58CD8D5DFF4EE748A506A /* Pods_StoryMaker.framework */; };
+		628A957874EE943138A1993E /* Pods_StoryMakerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECB9D2409C19B17261C50399 /* Pods_StoryMakerTests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4DEF11302D3AAEDE0098FA68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DEF110E2D3AAEDD0098FA68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DEF11152D3AAEDD0098FA68;
+			remoteInfo = StoryMaker;
+		};
+		4DEF113A2D3AAEDE0098FA68 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4DEF110E2D3AAEDD0098FA68 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4DEF11152D3AAEDD0098FA68;
+			remoteInfo = StoryMaker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4DEF11162D3AAEDD0098FA68 /* StoryMaker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StoryMaker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEF112F2D3AAEDE0098FA68 /* StoryMakerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryMakerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4DEF11392D3AAEDE0098FA68 /* StoryMakerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = StoryMakerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55BAC7948F7CC9C47B2B16F2 /* Pods-StoryMakerTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryMakerTests.debug.xcconfig"; path = "Target Support Files/Pods-StoryMakerTests/Pods-StoryMakerTests.debug.xcconfig"; sourceTree = "<group>"; };
+		B6F58CD8D5DFF4EE748A506A /* Pods_StoryMaker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryMaker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D414CDE90E19474311874301 /* Pods-StoryMakerTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryMakerTests.release.xcconfig"; path = "Target Support Files/Pods-StoryMakerTests/Pods-StoryMakerTests.release.xcconfig"; sourceTree = "<group>"; };
+		E685E213B4406FC19ABB705E /* Pods-StoryMaker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryMaker.debug.xcconfig"; path = "Target Support Files/Pods-StoryMaker/Pods-StoryMaker.debug.xcconfig"; sourceTree = "<group>"; };
+		ECB9D2409C19B17261C50399 /* Pods_StoryMakerTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_StoryMakerTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F3D1086AE98D59338A9C6C40 /* Pods-StoryMaker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-StoryMaker.release.xcconfig"; path = "Target Support Files/Pods-StoryMaker/Pods-StoryMaker.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		4DEF11412D3AAEDE0098FA68 /* Exceptions for "StoryMaker" folder in "StoryMaker" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = 4DEF11152D3AAEDD0098FA68 /* StoryMaker */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		4DEF11182D3AAEDD0098FA68 /* StoryMaker */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				4DEF11412D3AAEDE0098FA68 /* Exceptions for "StoryMaker" folder in "StoryMaker" target */,
+			);
+			path = StoryMaker;
+			sourceTree = "<group>";
+		};
+		4DEF11322D3AAEDE0098FA68 /* StoryMakerTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
+			path = StoryMakerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4DEF11132D3AAEDD0098FA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5BD6883D0F6EB3EA86CA9FDC /* Pods_StoryMaker.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF112C2D3AAEDE0098FA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				628A957874EE943138A1993E /* Pods_StoryMakerTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF11362D3AAEDE0098FA68 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		07E3C9F0F2A0F8361944B712 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6F58CD8D5DFF4EE748A506A /* Pods_StoryMaker.framework */,
+				ECB9D2409C19B17261C50399 /* Pods_StoryMakerTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4DEF110D2D3AAEDD0098FA68 = {
+			isa = PBXGroup;
+			children = (
+				4DEF11182D3AAEDD0098FA68 /* StoryMaker */,
+				4DEF11322D3AAEDE0098FA68 /* StoryMakerTests */,
+				4DEF11172D3AAEDD0098FA68 /* Products */,
+				655CD68FF52EE2A447A81406 /* Pods */,
+				07E3C9F0F2A0F8361944B712 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4DEF11172D3AAEDD0098FA68 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4DEF11162D3AAEDD0098FA68 /* StoryMaker.app */,
+				4DEF112F2D3AAEDE0098FA68 /* StoryMakerTests.xctest */,
+				4DEF11392D3AAEDE0098FA68 /* StoryMakerUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		655CD68FF52EE2A447A81406 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E685E213B4406FC19ABB705E /* Pods-StoryMaker.debug.xcconfig */,
+				F3D1086AE98D59338A9C6C40 /* Pods-StoryMaker.release.xcconfig */,
+				55BAC7948F7CC9C47B2B16F2 /* Pods-StoryMakerTests.debug.xcconfig */,
+				D414CDE90E19474311874301 /* Pods-StoryMakerTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4DEF11152D3AAEDD0098FA68 /* StoryMaker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DEF11422D3AAEDE0098FA68 /* Build configuration list for PBXNativeTarget "StoryMaker" */;
+			buildPhases = (
+				D1D99DF917E0BDD883B30E2F /* [CP] Check Pods Manifest.lock */,
+				4DEF11122D3AAEDD0098FA68 /* Sources */,
+				4DEF11132D3AAEDD0098FA68 /* Frameworks */,
+				4DEF11142D3AAEDD0098FA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				4DEF11182D3AAEDD0098FA68 /* StoryMaker */,
+			);
+			name = StoryMaker;
+			productName = StoryMaker;
+			productReference = 4DEF11162D3AAEDD0098FA68 /* StoryMaker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4DEF112E2D3AAEDE0098FA68 /* StoryMakerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DEF11472D3AAEDE0098FA68 /* Build configuration list for PBXNativeTarget "StoryMakerTests" */;
+			buildPhases = (
+				200C144ED61A751407EE7FBA /* [CP] Check Pods Manifest.lock */,
+				4DEF112B2D3AAEDE0098FA68 /* Sources */,
+				4DEF112C2D3AAEDE0098FA68 /* Frameworks */,
+				4DEF112D2D3AAEDE0098FA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DEF11312D3AAEDE0098FA68 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				4DEF11322D3AAEDE0098FA68 /* StoryMakerTests */,
+			);
+			name = StoryMakerTests;
+			productName = StoryMakerTests;
+			productReference = 4DEF112F2D3AAEDE0098FA68 /* StoryMakerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4DEF11382D3AAEDE0098FA68 /* StoryMakerUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4DEF114A2D3AAEDE0098FA68 /* Build configuration list for PBXNativeTarget "StoryMakerUITests" */;
+			buildPhases = (
+				4DEF11352D3AAEDE0098FA68 /* Sources */,
+				4DEF11362D3AAEDE0098FA68 /* Frameworks */,
+				4DEF11372D3AAEDE0098FA68 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4DEF113B2D3AAEDE0098FA68 /* PBXTargetDependency */,
+			);
+			name = StoryMakerUITests;
+			productName = StoryMakerUITests;
+			productReference = 4DEF11392D3AAEDE0098FA68 /* StoryMakerUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4DEF110E2D3AAEDD0098FA68 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					4DEF11152D3AAEDD0098FA68 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					4DEF112E2D3AAEDE0098FA68 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 4DEF11152D3AAEDD0098FA68;
+					};
+					4DEF11382D3AAEDE0098FA68 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 4DEF11152D3AAEDD0098FA68;
+					};
+				};
+			};
+			buildConfigurationList = 4DEF11112D3AAEDD0098FA68 /* Build configuration list for PBXProject "StoryMaker" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4DEF110D2D3AAEDD0098FA68;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 4DEF11172D3AAEDD0098FA68 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4DEF11152D3AAEDD0098FA68 /* StoryMaker */,
+				4DEF112E2D3AAEDE0098FA68 /* StoryMakerTests */,
+				4DEF11382D3AAEDE0098FA68 /* StoryMakerUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4DEF11142D3AAEDD0098FA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF112D2D3AAEDE0098FA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF11372D3AAEDE0098FA68 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		200C144ED61A751407EE7FBA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StoryMakerTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D1D99DF917E0BDD883B30E2F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-StoryMaker-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4DEF11122D3AAEDD0098FA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF112B2D3AAEDE0098FA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4DEF11352D3AAEDE0098FA68 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4DEF11312D3AAEDE0098FA68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DEF11152D3AAEDD0098FA68 /* StoryMaker */;
+			targetProxy = 4DEF11302D3AAEDE0098FA68 /* PBXContainerItemProxy */;
+		};
+		4DEF113B2D3AAEDE0098FA68 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4DEF11152D3AAEDD0098FA68 /* StoryMaker */;
+			targetProxy = 4DEF113A2D3AAEDE0098FA68 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4DEF11432D3AAEDE0098FA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E685E213B4406FC19ABB705E /* Pods-StoryMaker.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKSVZ28VK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StoryMaker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = busesahinbas.StoryMaker.StoryMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4DEF11442D3AAEDE0098FA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F3D1086AE98D59338A9C6C40 /* Pods-StoryMaker.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKSVZ28VK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = StoryMaker/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = busesahinbas.StoryMaker.StoryMaker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4DEF11452D3AAEDE0098FA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4DEF11462D3AAEDE0098FA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4DEF11482D3AAEDE0098FA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 55BAC7948F7CC9C47B2B16F2 /* Pods-StoryMakerTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKSVZ28VK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = busesahinbas.StoryMaker.StoryMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoryMaker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StoryMaker";
+			};
+			name = Debug;
+		};
+		4DEF11492D3AAEDE0098FA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D414CDE90E19474311874301 /* Pods-StoryMakerTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKSVZ28VK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = busesahinbas.StoryMaker.StoryMakerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/StoryMaker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/StoryMaker";
+			};
+			name = Release;
+		};
+		4DEF114B2D3AAEDE0098FA68 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKSVZ28VK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = busesahinbas.StoryMaker.StoryMakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StoryMaker;
+			};
+			name = Debug;
+		};
+		4DEF114C2D3AAEDE0098FA68 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = SKSVZ28VK6;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = busesahinbas.StoryMaker.StoryMakerUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = StoryMaker;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4DEF11112D3AAEDD0098FA68 /* Build configuration list for PBXProject "StoryMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEF11452D3AAEDE0098FA68 /* Debug */,
+				4DEF11462D3AAEDE0098FA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DEF11422D3AAEDE0098FA68 /* Build configuration list for PBXNativeTarget "StoryMaker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEF11432D3AAEDE0098FA68 /* Debug */,
+				4DEF11442D3AAEDE0098FA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DEF11472D3AAEDE0098FA68 /* Build configuration list for PBXNativeTarget "StoryMakerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEF11482D3AAEDE0098FA68 /* Debug */,
+				4DEF11492D3AAEDE0098FA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4DEF114A2D3AAEDE0098FA68 /* Build configuration list for PBXNativeTarget "StoryMakerUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4DEF114B2D3AAEDE0098FA68 /* Debug */,
+				4DEF114C2D3AAEDE0098FA68 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4DEF110E2D3AAEDD0098FA68 /* Project object */;
+}
