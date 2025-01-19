@@ -1,6 +1,14 @@
+//
+//  EditViewController.swift
+//  StoryMaker
+//
+//  Created by Buse Şahinbaş on 17.01.2025.
+//  Copyright © 2025 Buse Şahinbaş. All rights reserved.
+//
+
 import UIKit
 
-class EditViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
+class EditViewController: UIViewController{
     
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var toolbarStack: UIStackView!
@@ -10,17 +18,7 @@ class EditViewController: UIViewController, UICollectionViewDataSource, UICollec
     
     var selectedImage: UIImage?
     
-    // Filtreler için array'i tekrar ekleyelim
-    private var filters: [(String, CIFilter?)] = [
-        ("Original", nil),
-        ("Mono", CIFilter(name: "CIPhotoEffectMono")),
-        ("Noir", CIFilter(name: "CIPhotoEffectNoir")),
-        ("Fade", CIFilter(name: "CIPhotoEffectFade")),
-        ("Chrome", CIFilter(name: "CIPhotoEffectChrome")),
-        ("Instant", CIFilter(name: "CIPhotoEffectInstant")),
-        ("Tonal", CIFilter(name: "CIPhotoEffectTonal")),
-        ("Transfer", CIFilter(name: "CIPhotoEffectTransfer"))
-    ]
+    private var filters: [FilterType] = FilterType.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,8 +28,8 @@ class EditViewController: UIViewController, UICollectionViewDataSource, UICollec
         setupToolbar()
     }
     
+    
     private func setupUI() {
-        // Koyu arka plan
         view.backgroundColor = .black
         
         // ImageView ayarları
@@ -55,26 +53,22 @@ class EditViewController: UIViewController, UICollectionViewDataSource, UICollec
         sliderStack.backgroundColor = UIColor.black.withAlphaComponent(0.5)
     }
     
+    private func setupCollectionView() {
+        filterCollectionView.register(UINib(nibName: "FilterCollectionViewCell", bundle: nil),
+                                      forCellWithReuseIdentifier: FilterCollectionViewCell.identifier)
+        filterCollectionView.dataSource = self
+        filterCollectionView.delegate = self
+        filterCollectionView.isHidden = true
+    }
+    
     private func setupToolbar() {
-        let tools = ["Crop", "Canvas", "Filters", "Effect", "Text", "Frame"]
-        
-        tools.forEach { tool in
+        ToolType.allCases.forEach { tool in
             let button = UIButton(type: .system)
-            button.setTitle(tool, for: .normal)
+            button.setTitle(tool.title, for: .normal)
             button.setTitleColor(.white, for: .normal)
             button.titleLabel?.font = .systemFont(ofSize: 12)
             
-            let iconName: String
-            switch tool {
-            case "Crop": iconName = "crop"
-            case "Canvas": iconName = "square.and.pencil"
-            case "Filters": iconName = "wand.and.stars"
-            case "Effect": iconName = "sparkles"
-            case "Text": iconName = "textformat"
-            case "Frame": iconName = "square.on.square"
-            default: iconName = ""
-            }
-            
+            let iconName = tool.iconName
             button.setImage(UIImage(systemName: iconName), for: .normal)
             button.tintColor = .white
             button.centerImageAndButton(spacing: 5)
@@ -106,49 +100,6 @@ class EditViewController: UIViewController, UICollectionViewDataSource, UICollec
             default:
                 self.filterCollectionView.isHidden = true
                 self.sliderStack.isHidden = true
-            }
-        }
-    }
-    
-    private func setupCollectionView() {
-        filterCollectionView.register(UINib(nibName: "FilterCollectionViewCell", bundle: nil), 
-                                    forCellWithReuseIdentifier: FilterCollectionViewCell.identifier)
-        filterCollectionView.dataSource = self
-        filterCollectionView.delegate = self
-        filterCollectionView.isHidden = true
-    }
-    
-    // UICollectionViewDataSource
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return filters.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, 
-                       cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.identifier, 
-                                                          for: indexPath) as? FilterCollectionViewCell else {
-            return UICollectionViewCell()
-        }
-        
-        if let image = selectedImage {
-            if let filter = filters[indexPath.item].1 {
-                let filteredImage = applyFilter(filter, to: image)
-                cell.configure(with: filteredImage ?? image)
-            } else {
-                cell.configure(with: image)
-            }
-        }
-        
-        return cell
-    }
-    
-    // UICollectionViewDelegate
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let image = selectedImage {
-            if let filter = filters[indexPath.item].1 {
-                imageView.image = applyFilter(filter, to: image)
-            } else {
-                imageView.image = image
             }
         }
     }
@@ -284,4 +235,45 @@ extension UIButton {
             )
         }
     }
-} 
+}
+
+//MARK: - UICollectionViewDataSource
+extension EditViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return filters.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(
+            withReuseIdentifier: FilterCollectionViewCell.identifier,
+            for: indexPath) as? FilterCollectionViewCell
+        else {
+            return UICollectionViewCell()
+        }
+        
+        let filterType = filters[indexPath.item]
+        if let image = selectedImage {
+            if let filter = filterType.filter {
+                let filteredImage = applyFilter(filter, to: image)
+                cell.configure(with: filteredImage ?? image)
+            } else {
+                cell.configure(with: image)
+            }
+        }
+        return cell
+    }
+}
+
+//MARK: - UICollectionViewDelegate
+extension EditViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let filterType = filters[indexPath.item]
+        if let image = selectedImage {
+            if let filter = filterType.filter {
+                imageView.image = applyFilter(filter, to: image)
+            } else {
+                imageView.image = image
+            }
+        }
+    }
+}

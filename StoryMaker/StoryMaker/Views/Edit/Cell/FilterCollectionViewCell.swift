@@ -1,3 +1,11 @@
+//
+//  FilterCollectionViewCell.swift
+//  StoryMaker
+//
+//  Created by Buse Şahinbaş on 17.01.2025.
+//  Copyright © 2025 Buse Şahinbaş. All rights reserved.
+//
+
 import UIKit
 
 class FilterCollectionViewCell: UICollectionViewCell {
