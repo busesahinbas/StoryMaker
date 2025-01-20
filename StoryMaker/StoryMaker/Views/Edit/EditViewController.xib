@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,9 +11,9 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="EditViewController" customModule="StoryMaker" customModuleProvider="target">
             <connections>
                 <outlet property="checkButton" destination="checkButtonId" id="checkButtonOutlet"/>
-                <outlet property="filterCollectionView" destination="filterCollectionViewId" id="filterCollectionViewOutlet"/>
-                <outlet property="imageView" destination="imageViewId" id="imageViewOutlet"/>
-                <outlet property="sliderStack" destination="sliderStackId" id="sliderStackOutlet"/>
+                <outlet property="collectionView" destination="filterCollectionViewId" id="X1y-Ve-Pe0"/>
+                <outlet property="imageView" destination="uXb-Kn-2Wq" id="bN9-1f-dWM"/>
+                <outlet property="tableView" destination="jiL-aO-zaA" id="8Af-UR-jDO"/>
                 <outlet property="toolbarStack" destination="toolbarStackId" id="toolbarStackOutlet"/>
                 <outlet property="view" destination="mainView" id="mainViewId"/>
             </connections>
@@ -23,23 +23,18 @@
             <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="imageViewId">
-                    <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                </imageView>
-                
                 <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="toolbarStackId">
                     <rect key="frame" x="0.0" y="758" width="393" height="60"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="60" id="toolbarHeight"/>
                     </constraints>
                 </stackView>
-                
                 <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="filterCollectionViewId">
-                    <rect key="frame" x="0.0" y="658" width="393" height="100"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <rect key="frame" x="0.0" y="630" width="393" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="100" id="collectionViewHeight"/>
+                        <constraint firstAttribute="height" constant="120" id="collectionViewHeight"/>
                     </constraints>
                     <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="flowLayout">
                         <size key="itemSize" width="80" height="80"/>
@@ -48,55 +43,65 @@
                         <inset key="sectionInset" minX="10" minY="10" maxX="10" maxY="10"/>
                     </collectionViewFlowLayout>
                 </collectionView>
-                
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="sliderStackId">
-                    <rect key="frame" x="16" y="558" width="361" height="100"/>
-                    <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="100" id="sliderStackHeight"/>
-                    </constraints>
-                </stackView>
-                
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="checkButtonId">
-                    <rect key="frame" x="333" y="59" width="44" height="44"/>
+                    <rect key="frame" x="333" y="71" width="44" height="44"/>
                     <constraints>
-                        <constraint firstAttribute="width" constant="44" id="checkButtonWidth"/>
                         <constraint firstAttribute="height" constant="44" id="checkButtonHeight"/>
+                        <constraint firstAttribute="width" constant="44" id="checkButtonWidth"/>
                     </constraints>
-                    <color key="tintColor" systemColor="systemBlueColor"/>
-                    <state key="normal" image="checkmark.circle.fill" catalog="system"/>
+                    <color key="tintColor" red="0.76470588240000004" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <state key="normal" image="checkmark.circle.fill" catalog="system">
+                        <color key="titleColor" red="0.76470588240000004" green="0.33725490200000002" blue="0.33725490200000002" alpha="1" colorSpace="calibratedRGB"/>
+                    </state>
                 </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UMm-SW-nFi">
+                    <rect key="frame" x="0.0" y="59" width="393" height="571"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="uXb-Kn-2Wq">
+                            <rect key="frame" x="20" y="20" width="353" height="531"/>
+                        </imageView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemGray4Color"/>
+                    <constraints>
+                        <constraint firstItem="uXb-Kn-2Wq" firstAttribute="leading" secondItem="UMm-SW-nFi" secondAttribute="leading" constant="20" id="AAO-z8-76r"/>
+                        <constraint firstAttribute="bottom" secondItem="uXb-Kn-2Wq" secondAttribute="bottom" constant="20" id="Glf-XS-yGJ"/>
+                        <constraint firstItem="uXb-Kn-2Wq" firstAttribute="top" secondItem="UMm-SW-nFi" secondAttribute="top" constant="20" id="StZ-1n-jFI"/>
+                        <constraint firstAttribute="trailing" secondItem="uXb-Kn-2Wq" secondAttribute="trailing" constant="20" id="rOF-pN-Ryp"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jiL-aO-zaA">
+                    <rect key="frame" x="0.0" y="630" width="393" height="120"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
             </subviews>
             <viewLayoutGuide key="safeArea" id="safeArea"/>
-            <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
-                <constraint firstItem="imageViewId" firstAttribute="top" secondItem="mainView" secondAttribute="top" id="imageTop"/>
-                <constraint firstItem="imageViewId" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="imageLeading"/>
-                <constraint firstAttribute="trailing" secondItem="imageViewId" secondAttribute="trailing" id="imageTrailing"/>
-                <constraint firstAttribute="bottom" secondItem="imageViewId" secondAttribute="bottom" id="imageBottom"/>
-                
-                <constraint firstItem="toolbarStackId" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="toolbarLeading"/>
-                <constraint firstAttribute="trailing" secondItem="toolbarStackId" secondAttribute="trailing" id="toolbarTrailing"/>
-                <constraint firstItem="safeArea" firstAttribute="bottom" secondItem="toolbarStackId" secondAttribute="bottom" id="toolbarBottom"/>
-                
-                <constraint firstItem="filterCollectionViewId" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="filterLeading"/>
-                <constraint firstAttribute="trailing" secondItem="filterCollectionViewId" secondAttribute="trailing" id="filterTrailing"/>
-                <constraint firstItem="toolbarStackId" firstAttribute="top" secondItem="filterCollectionViewId" secondAttribute="bottom" id="filterBottom"/>
-                
-                <constraint firstItem="sliderStackId" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" constant="16" id="sliderLeading"/>
-                <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="sliderStackId" secondAttribute="trailing" constant="16" id="sliderTrailing"/>
-                <constraint firstItem="filterCollectionViewId" firstAttribute="top" secondItem="sliderStackId" secondAttribute="bottom" id="sliderBottom"/>
-                
+                <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="UMm-SW-nFi" secondAttribute="trailing" id="2Lu-rb-e8k"/>
+                <constraint firstItem="jiL-aO-zaA" firstAttribute="leading" secondItem="filterCollectionViewId" secondAttribute="leading" id="5YO-Sg-50y"/>
+                <constraint firstItem="jiL-aO-zaA" firstAttribute="bottom" secondItem="filterCollectionViewId" secondAttribute="bottom" id="9Lh-hu-DeG"/>
+                <constraint firstItem="UMm-SW-nFi" firstAttribute="top" secondItem="safeArea" secondAttribute="top" id="CBQ-Il-q1M"/>
                 <constraint firstItem="checkButtonId" firstAttribute="top" secondItem="safeArea" secondAttribute="top" constant="12" id="checkTop"/>
                 <constraint firstItem="safeArea" firstAttribute="trailing" secondItem="checkButtonId" secondAttribute="trailing" constant="16" id="checkTrailing"/>
+                <constraint firstItem="toolbarStackId" firstAttribute="top" secondItem="filterCollectionViewId" secondAttribute="bottom" constant="8" id="filterBottom"/>
+                <constraint firstItem="filterCollectionViewId" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="filterLeading"/>
+                <constraint firstAttribute="trailing" secondItem="filterCollectionViewId" secondAttribute="trailing" id="filterTrailing"/>
+                <constraint firstItem="jiL-aO-zaA" firstAttribute="trailing" secondItem="filterCollectionViewId" secondAttribute="trailing" id="liT-8Q-VCy"/>
+                <constraint firstItem="UMm-SW-nFi" firstAttribute="leading" secondItem="safeArea" secondAttribute="leading" id="n1L-VX-BX4"/>
+                <constraint firstItem="filterCollectionViewId" firstAttribute="top" secondItem="UMm-SW-nFi" secondAttribute="bottom" id="rbu-df-sMZ"/>
+                <constraint firstItem="jiL-aO-zaA" firstAttribute="top" secondItem="filterCollectionViewId" secondAttribute="top" id="tg6-Ef-ppe"/>
+                <constraint firstItem="safeArea" firstAttribute="bottom" secondItem="toolbarStackId" secondAttribute="bottom" id="toolbarBottom"/>
+                <constraint firstItem="toolbarStackId" firstAttribute="leading" secondItem="mainView" secondAttribute="leading" id="toolbarLeading"/>
+                <constraint firstAttribute="trailing" secondItem="toolbarStackId" secondAttribute="trailing" id="toolbarTrailing"/>
             </constraints>
-            <point key="canvasLocation" x="140" y="20"/>
+            <point key="canvasLocation" x="139.69465648854961" y="19.718309859154932"/>
         </view>
     </objects>
     <resources>
         <image name="checkmark.circle.fill" catalog="system" width="128" height="123"/>
-        <systemColor name="systemBlueColor">
-            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="systemGray4Color">
+            <color red="0.81960784313725488" green="0.81960784313725488" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

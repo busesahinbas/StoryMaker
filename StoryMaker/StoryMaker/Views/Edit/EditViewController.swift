@@ -10,67 +10,57 @@ import UIKit
 
 class EditViewController: UIViewController{
     
-    @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var toolbarStack: UIStackView!
-    @IBOutlet weak var filterCollectionView: UICollectionView!
-    @IBOutlet weak var sliderStack: UIStackView!
-    @IBOutlet weak var checkButton: UIButton!
+    @IBOutlet private(set) weak var imageView: UIImageView!
+    @IBOutlet private(set) weak var toolbarStack: UIStackView!
+    @IBOutlet private(set) weak var collectionView: UICollectionView!
+    @IBOutlet private(set) weak var checkButton: UIButton!
+    @IBOutlet private(set)weak var tableView: UITableView!
     
     var selectedImage: UIImage?
-    
     private var filters: [FilterType] = FilterType.allCases
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         setupCollectionView()
-        setupSliders()
+        setupTableView()
         setupToolbar()
     }
     
-    
     private func setupUI() {
-        view.backgroundColor = .black
-        
-        // ImageView ayarları
         imageView.image = selectedImage
         imageView.contentMode = .scaleAspectFit
         imageView.clipsToBounds = true
         
-        // Check button ayarları
-        checkButton.tintColor = .systemBlue
         checkButton.setImage(UIImage(systemName: "checkmark.circle.fill"), for: .normal)
         checkButton.addTarget(self, action: #selector(checkButtonTapped), for: .touchUpInside)
         
-        // Toolbar'ı başlangıçta göster
         toolbarStack.isHidden = false
-        filterCollectionView.isHidden = true
-        sliderStack.isHidden = true
-        
-        // Yarı saydam arka planlar
-        toolbarStack.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        filterCollectionView.backgroundColor = UIColor.black.withAlphaComponent(0.5)
-        sliderStack.backgroundColor = UIColor.black.withAlphaComponent(0.5)
+        collectionView.isHidden = true
     }
     
     private func setupCollectionView() {
-        filterCollectionView.register(UINib(nibName: "FilterCollectionViewCell", bundle: nil),
-                                      forCellWithReuseIdentifier: FilterCollectionViewCell.identifier)
-        filterCollectionView.dataSource = self
-        filterCollectionView.delegate = self
-        filterCollectionView.isHidden = true
+        collectionView.register(UINib(nibName: "FilterCollectionViewCell", bundle: nil),
+                                forCellWithReuseIdentifier: FilterCollectionViewCell.identifier)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.isHidden = true
+    }
+    
+    private func setupTableView() {
+        tableView.delegate = self
+        tableView.dataSource = self
+        tableView.register(UINib(nibName: "SettingsTableViewCell", bundle: nil), forCellReuseIdentifier: SettingsTableViewCell.identifier)
     }
     
     private func setupToolbar() {
         ToolType.allCases.forEach { tool in
             let button = UIButton(type: .system)
             button.setTitle(tool.title, for: .normal)
-            button.setTitleColor(.white, for: .normal)
+            button.setTitleColor(.black, for: .normal)
             button.titleLabel?.font = .systemFont(ofSize: 12)
-            
-            let iconName = tool.iconName
-            button.setImage(UIImage(systemName: iconName), for: .normal)
-            button.tintColor = .white
+            button.setImage(UIImage(systemName: tool.iconName), for: .normal)
+            button.tintColor = .black
             button.centerImageAndButton(spacing: 5)
             button.addTarget(self, action: #selector(toolButtonTapped(_:)), for: .touchUpInside)
             
@@ -79,34 +69,31 @@ class EditViewController: UIViewController{
     }
     
     @objc private func checkButtonTapped() {
-        // Düzenlemeyi tamamla ve geri dön
         dismiss(animated: true)
     }
     
     @objc private func toolButtonTapped(_ sender: UIButton) {
         guard let title = sender.title(for: .normal) else { return }
         
-        // Tüm view'ları göster
         UIView.animate(withDuration: 0.3) {
             self.toolbarStack.isHidden = false
             
             switch title {
             case "Filters":
-                self.filterCollectionView.isHidden = false
-                self.sliderStack.isHidden = true
+                self.collectionView.isHidden = false
+                self.tableView.isHidden = true
             case "Effect":
-                self.filterCollectionView.isHidden = true
-                self.sliderStack.isHidden = false
+                self.collectionView.isHidden = true
+                self.tableView.isHidden = false
             default:
-                self.filterCollectionView.isHidden = true
-                self.sliderStack.isHidden = true
+                self.collectionView.isHidden = true
+                self.tableView.isHidden = true
             }
         }
     }
     
     private func applyFilter(_ filter: CIFilter, to image: UIImage) -> UIImage? {
         guard let ciImage = CIImage(image: image) else { return nil }
-        
         filter.setValue(ciImage, forKey: kCIInputImageKey)
         
         guard let outputImage = filter.outputImage else { return nil }
@@ -115,129 +102,9 @@ class EditViewController: UIViewController{
         guard let cgImage = context.createCGImage(outputImage, from: outputImage.extent) else { return nil }
         return UIImage(cgImage: cgImage)
     }
-    
-    private func setupSliders() {
-        let sliders = [
-            ("Contrast", createSlider()),
-            ("Shadow", createSlider()),
-            ("Brightness", createSlider())
-        ]
-        
-        sliders.forEach { title, slider in
-            let containerStack = UIStackView()
-            containerStack.axis = .horizontal
-            containerStack.spacing = 10
-            
-            let label = UILabel()
-            label.text = title
-            label.textColor = .label
-            label.setContentHuggingPriority(.defaultHigh, for: .horizontal)
-            
-            containerStack.addArrangedSubview(label)
-            containerStack.addArrangedSubview(slider)
-            
-            sliderStack.addArrangedSubview(containerStack)
-        }
-        
-        sliderStack.isHidden = true // Başlangıçta gizli olsun
-    }
-    
-    private func createSlider() -> UISlider {
-        let slider = UISlider()
-        slider.minimumValue = 0
-        slider.maximumValue = 1
-        slider.value = 0.5
-        slider.addTarget(self, action: #selector(sliderValueChanged(_:)), for: .valueChanged)
-        return slider
-    }
-    
-    @objc private func sliderValueChanged(_ slider: UISlider) {
-        guard let image = selectedImage else { return }
-        
-        // Slider'ın parent stack view'ını bul
-        if let stackView = slider.superview as? UIStackView,
-           let label = stackView.arrangedSubviews.first as? UILabel {
-            
-            switch label.text {
-            case "Contrast":
-                adjustContrast(value: slider.value)
-            case "Shadow":
-                adjustShadow(value: slider.value)
-            case "Brightness":
-                adjustBrightness(value: slider.value)
-            default:
-                break
-            }
-        }
-    }
-    
-    private func adjustContrast(value: Float) {
-        guard let image = selectedImage else { return }
-        let filter = CIFilter(name: "CIColorControls")
-        filter?.setValue(CIImage(image: image), forKey: kCIInputImageKey)
-        filter?.setValue(value * 2, forKey: kCIInputContrastKey) // 0-2 aralığı için
-        
-        if let outputImage = filter?.outputImage,
-           let cgImage = CIContext().createCGImage(outputImage, from: outputImage.extent) {
-            imageView.image = UIImage(cgImage: cgImage)
-        }
-    }
-    
-    private func adjustShadow(value: Float) {
-        guard let image = selectedImage else { return }
-        let filter = CIFilter(name: "CIHighlightShadowAdjust")
-        filter?.setValue(CIImage(image: image), forKey: kCIInputImageKey)
-        filter?.setValue(value * 2 - 1, forKey: "inputShadowAmount") // -1 to 1 aralığı için
-        
-        if let outputImage = filter?.outputImage,
-           let cgImage = CIContext().createCGImage(outputImage, from: outputImage.extent) {
-            imageView.image = UIImage(cgImage: cgImage)
-        }
-    }
-    
-    private func adjustBrightness(value: Float) {
-        guard let image = selectedImage else { return }
-        let filter = CIFilter(name: "CIColorControls")
-        filter?.setValue(CIImage(image: image), forKey: kCIInputImageKey)
-        filter?.setValue(value * 2 - 1, forKey: kCIInputBrightnessKey) // -1 to 1 aralığı için
-        
-        if let outputImage = filter?.outputImage,
-           let cgImage = CIContext().createCGImage(outputImage, from: outputImage.extent) {
-            imageView.image = UIImage(cgImage: cgImage)
-        }
-    }
 }
 
-// UIButton extension - icon ve text'i dikey hizalamak için
-extension UIButton {
-    func centerImageAndButton(spacing: CGFloat = 6.0) {
-        guard let imageView = self.imageView,
-              let titleLabel = self.titleLabel else { return }
-        
-        if let imageSize = imageView.image?.size,
-           let font = titleLabel.font {
-            let titleSize = titleLabel.text?.size(withAttributes: [.font: font]) ?? .zero
-            
-            let totalHeight = imageSize.height + spacing + titleSize.height
-            
-            self.imageEdgeInsets = UIEdgeInsets(
-                top: -(totalHeight - imageSize.height),
-                left: 0,
-                bottom: 0,
-                right: -titleSize.width
-            )
-            
-            self.titleEdgeInsets = UIEdgeInsets(
-                top: 0,
-                left: -imageSize.width,
-                bottom: -(totalHeight - titleSize.height),
-                right: 0
-            )
-        }
-    }
-}
-
-//MARK: - UICollectionViewDataSource
+// MARK: - UICollectionViewDataSource
 extension EditViewController: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return filters.count
@@ -264,7 +131,7 @@ extension EditViewController: UICollectionViewDataSource {
     }
 }
 
-//MARK: - UICollectionViewDelegate
+// MARK: - UICollectionViewDelegate
 extension EditViewController: UICollectionViewDelegate {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let filterType = filters[indexPath.item]
@@ -274,6 +141,70 @@ extension EditViewController: UICollectionViewDelegate {
             } else {
                 imageView.image = image
             }
+        }
+    }
+}
+
+// MARK: - UITableViewDataSource & UITableViewDelegate
+extension EditViewController: UITableViewDataSource, UITableViewDelegate {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1  // Since we only have one settings cell
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SettingsTableViewCell.identifier, for: indexPath) as? SettingsTableViewCell else {
+            return UITableViewCell()
+        }
+        
+        // Configure the sliders
+        cell.didChangeBrightness = { [weak self] value in
+            self?.adjustImageBrightness(value)
+        }
+        
+        cell.didChangeContrast = { [weak self] value in
+            self?.adjustImageContrast(value)
+        }
+        
+        cell.didChangeShadow = { [weak self] value in
+            self?.adjustImageShadow(value)
+        }
+        
+        return cell
+    }
+    
+    private func adjustImageBrightness(_ value: Float) {
+        guard let image = selectedImage else { return }
+        let filter = CIFilter(name: "CIColorControls")
+        filter?.setValue(CIImage(image: image), forKey: kCIInputImageKey)
+        filter?.setValue(value * 2 - 1, forKey: kCIInputBrightnessKey)
+        
+        if let outputImage = filter?.outputImage,
+           let cgImage = CIContext().createCGImage(outputImage, from: outputImage.extent) {
+            imageView.image = UIImage(cgImage: cgImage)
+        }
+    }
+    
+    private func adjustImageContrast(_ value: Float) {
+        guard let image = selectedImage else { return }
+        let filter = CIFilter(name: "CIColorControls")
+        filter?.setValue(CIImage(image: image), forKey: kCIInputImageKey)
+        filter?.setValue(value * 2, forKey: kCIInputContrastKey)
+        
+        if let outputImage = filter?.outputImage,
+           let cgImage = CIContext().createCGImage(outputImage, from: outputImage.extent) {
+            imageView.image = UIImage(cgImage: cgImage)
+        }
+    }
+    
+    private func adjustImageShadow(_ value: Float) {
+        guard let image = selectedImage else { return }
+        let filter = CIFilter(name: "CIHighlightShadowAdjust")
+        filter?.setValue(CIImage(image: image), forKey: kCIInputImageKey)
+        filter?.setValue(value * 2 - 1, forKey: "inputShadowAmount")
+        
+        if let outputImage = filter?.outputImage,
+           let cgImage = CIContext().createCGImage(outputImage, from: outputImage.extent) {
+            imageView.image = UIImage(cgImage: cgImage)
         }
     }
 }
